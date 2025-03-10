@@ -20,7 +20,14 @@ void *malloc(size_t size)
 	// including size of the memory node
 	tmp.size = size + sizeof(struct memory_node);
 	tmp.next_node = head;
+	tmp.prev_node = NULL;
+	if(head != NULL)
+	{
+
+		head->prev_node = ptr;
+	}
 	head = ptr;
+
 	malloc_memcpy(ptr, &tmp, sizeof(struct memory_node));
 	return ptr + sizeof(struct memory_node);	
 }
@@ -30,10 +37,21 @@ void free(void * ptr)
 	void * real_ptr = ptr - sizeof(struct memory_node);
 	struct memory_node tmp;
 	malloc_memcpy(&tmp, real_ptr, sizeof(struct memory_node));
-	head = tmp.next_node;
+	if(tmp.next_node != NULL)
+	{
+		tmp.next_node->prev_node = tmp.prev_node;
+	}
+	if(tmp.prev_node !=NULL)
+	{
+
+		tmp.prev_node->next_node = tmp.next_node;
+	}
+	if(real_ptr == head)
+	{
+		head = tmp.next_node;
+	}
 	munmap(real_ptr, tmp.size);
 
-//	write(STDOUT_FILENO, "HERE\n", 6);
 	return;
 }
 

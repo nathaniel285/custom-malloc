@@ -8,6 +8,7 @@ struct memory_node
 {
 size_t size;
 struct memory_node * next_node;
+struct memory_node * prev_node;
 };
 
 extern struct memory_node * head;
