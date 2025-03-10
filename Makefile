@@ -5,3 +5,6 @@ default:
 
 clean:
 	rm *.o *.so test 
+
+run:
+	./test
