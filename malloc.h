@@ -3,6 +3,14 @@
 #include <stddef.h>
 #include <unistd.h>
 #include <sys/mman.h>
-extern void *malloc(size_t size);
 
+struct memory_node
+{
+size_t size;
+struct memory_node * next_node;
+};
+
+extern struct memory_node * head;
+extern void *malloc(size_t size);
+extern void free(void *);
 #endif

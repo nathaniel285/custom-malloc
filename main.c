@@ -9,8 +9,8 @@ int main()
 	for(int i =0; i < allocate_amount; i++)
 	{
 		ptr[i] = i;
-printf("ptr[%d] is %d\n", i, ptr[i]);
+		printf("ptr[%d] is %d\n", i, ptr[i]);
 	}
-
+	free(ptr);
 	return 0;
 }
