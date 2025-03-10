@@ -5,3 +5,4 @@ brk increases only after calling malloc like 10 times, meaning it is using brk s
 cannot use printf or anything that uses malloc under the hood as it will then segfault
 but cool to see that if you use printf it will print the thing of malloc i believe because it is using malloc
 
+seems to not work if mmap is not map_private and map_anonymous
