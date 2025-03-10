@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <mcheck.h>
-int main()
+
+
+int test_0()
 {
 	int allocate_amount = 10;
 	int* ptr = malloc(allocate_amount * sizeof(int));
@@ -14,6 +16,13 @@ int main()
 		printf("ptr[%d] is %d\n", i, ptr[i]);
 	}
 	free(ptr2);
-        free(ptr);
+	free(ptr);
+return 0;
+}
+
+
+int main()
+{
+        test_0();
 	return 0;
 }
