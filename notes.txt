@@ -2,3 +2,6 @@
 
 brk increases only after calling malloc like 10 times, meaning it is using brk so that is pretty cool
 
+cannot use printf or anything that uses malloc under the hood as it will then segfault
+but cool to see that if you use printf it will print the thing of malloc i believe because it is using malloc
+
