@@ -4,7 +4,7 @@ default:
 	gcc -L"$(PWD)" -Wall -o test main.c -lmalloc
 
 clean:
-	rm *.o *.so test 
+	rm -f *.o *.so test 
 
 run:
 	./test

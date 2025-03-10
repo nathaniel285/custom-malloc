@@ -1,0 +1,4 @@
+# Notes 3/10
+
+brk increases only after calling malloc like 10 times, meaning it is using brk so that is pretty cool
+
