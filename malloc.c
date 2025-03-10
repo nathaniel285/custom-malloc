@@ -1,6 +1,7 @@
 #include "malloc.h"
 void *malloc(size_t size)
 {
+	write(STDOUT_FILENO, "HI\n", 4);
 	return NULL;
 }
 

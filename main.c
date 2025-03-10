@@ -17,6 +17,7 @@ for(int i =0; i < 25; i++)
 	void* sbreak2 = sbrk(0);
 	printf("sbreak is now %p\n", sbreak2);
 }
+/*
 	if(ptr == NULL)
 	{
 		printf("ptr is null, it worked\n");
@@ -24,6 +25,6 @@ for(int i =0; i < 25; i++)
 	{
 		printf("ptr not null, did not work\n");
 		ptr[0] = 1;
-	}
+	}*/
 	return 0;
 }
