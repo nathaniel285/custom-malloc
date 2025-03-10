@@ -1,2 +1,4 @@
 have to run:
 export LD_LIBRARY_PATH="$PWD"
+
+can also do it by compiling normal then doing the LD_PRELOAD on the malloc

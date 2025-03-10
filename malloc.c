@@ -51,6 +51,7 @@ void free(void * ptr)
 		head = tmp.next_node;
 	}
 	munmap(real_ptr, tmp.size);
+write(STDOUT_FILENO, "hi\n", 3);
 
 	return;
 }
